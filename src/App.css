@@ -1,0 +1,391 @@
+:root {
+  /* Color variables */
+  --color-yellow: #fecd45;
+  --color-blue: #2568fb;
+  --color-white: #fff;
+
+  /* Font variables */
+  --main-font: sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: var(--main-font);
+  background-color: var(--color-yellow);
+}
+
+/* Common styles */
+.flx {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flx-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btn {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--color-blue);
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--color-white);
+  color: var(--color-blue);
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+main {
+  position: relative;
+}
+
+/* Header styles */
+header {
+  background-color: var(--color-blue);
+  padding: 5rem 0;
+}
+
+header h1 {
+  font-size: 5rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 200;
+  color: white;
+}
+
+/* Cards section */
+.cards_sec {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 80%;
+  margin: 0 auto;
+  grid-gap: 2rem;
+}
+
+.add_card_btn {
+  margin: 2rem 0;
+  padding: 1rem 2rem;
+}
+
+.card {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: var(--color-blue);
+  transition: all 0.2s ease-in-out;
+  background-color: #eee;
+}
+
+.card:hover {
+  background-color: var(--color-white);
+  cursor: pointer;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.add_btn {
+  background-color: var(--color-yellow);
+  border: 2px solid var(--color-yellow);
+  margin-right: 1rem;
+}
+
+.add_btn:hover {
+  color: var(--color-yellow);
+}
+
+.card_top,
+.card_mid,
+.card_btns {
+  display: flex;
+}
+
+.cat_name {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+
+.card_mid {
+  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+progress {
+  width: 70%;
+}
+
+.prog_info {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.prog_info small {
+  font-weight: 700;
+}
+
+.percentage {
+  font-size: 3rem;
+}
+
+.card_btns {
+  justify-content: center;
+}
+
+.del {
+  margin-left: 1rem;
+  background-color: orangered;
+  border: 2px solid orangered;
+}
+
+.del:hover {
+  background-color: var(--color-white);
+  color: orangered;
+}
+
+/* Add new item page */
+.add_page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.add_card,
+.expenses {
+  padding: 1rem 2rem;
+  background-color: var(--color-white);
+  border-radius: 0.5rem;
+}
+
+.add_card_title {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 2rem auto;
+  color: var(--color-blue);
+}
+
+.add_card input {
+  border: 2px solid rgb(37, 104, 251, 0.6);
+  padding: 0.5rem 1rem;
+  font-size: 1.8rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.add_card input:focus {
+  outline: none;
+}
+
+.add_card input::placeholder {
+  opacity: 0.4;
+}
+
+/* Expenses page */
+.expenses {
+  padding: 0 1rem 1rem 1rem;
+  width: 50%;
+  color: var(--color-blue);
+}
+
+.expenses_sec {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
+.expense {
+  display: flex;
+  background-color: var(--color-yellow);
+  padding: 1rem;
+  border-radius: 0.3rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  align-items: center;
+}
+
+.expense .btn {
+  font-size: 1.2rem;
+  padding: 0.3rem;
+  text-transform: lowercase;
+}
+
+.expense_name {
+  text-transform: uppercase;
+  margin-right: 1rem;
+  font-weight: 200;
+}
+
+.expense_date {
+  margin-right: auto;
+}
+
+.expense_amount {
+  font-weight: 200;
+}
+
+.empty_expense {
+  background-color: #eee;
+  display: flex;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+  width: 50%;
+  margin: 1rem auto;
+}
+
+.add_sec_tab {
+  width: 30%;
+  padding: 3rem;
+  text-transform: uppercase;
+}
+
+.add_sec_tab h3 {
+  opacity: 0.3;
+}
+
+#red {
+  border: 2px solid orangered;
+  box-shadow: 0 0 0.3rem orangered;
+}
+
+/* #redMax {
+  border: 2px solid orangered;
+  box-shadow: 0 0 0.3rem orangered;
+} */
+
+/* Hidden id */
+#hidden {
+  display: none;
+}
+
+/* media queries */
+/* at 1600px */
+@media screen and (max-width: 1600px) {
+  .cards_sec {
+    width: 90%;
+  }
+
+  .expenses {
+    width: 60%;
+  }
+
+  .empty_expense {
+    width: 60%;
+  }
+}
+
+/*  */
+@media screen and (max-width: 1200px) {
+  header h1 {
+    font-size: 4rem;
+  }
+
+  .cards_sec {
+    width: 95%;
+  }
+
+  .add_card_btn {
+    padding: 1rem 1.5rem;
+  }
+
+  .btn {
+    font-size: 1.6rem;
+  }
+
+  .add_sec_tab {
+    padding: 2rem;
+    font-size: 1.6rem;
+  }
+
+  .expenses {
+    width: 80%;
+  }
+}
+
+/* at 1000px */
+@media screen and (max-width: 1000px) {
+  .cards_sec {
+    grid-template-columns: 1fr;
+    width: 60%;
+  }
+
+  .add_sec_tab {
+    width: 50%;
+  }
+}
+
+/* at 820px */
+@media screen and (max-width: 820px) {
+  header h1 {
+    font-size: 3rem;
+  }
+
+  .cards_sec {
+    width: 80%;
+  }
+
+  .expenses {
+    width: 50%;
+  }
+
+  .expenses_sec {
+    grid-template-columns: 1fr;
+  }
+
+  .empty_expense {
+    width: 80%;
+  }
+}
+
+/* at 600px */
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+
+  header h1 {
+    font-size: 3rem;
+  }
+
+  .cards_sec {
+    width: 90%;
+  }
+
+  .add_sec_tab {
+    width: 80%;
+  }
+
+  .expenses {
+    width: 80%;
+  }
+
+  .empty_expense {
+    width: 90%;
+  }
+}
