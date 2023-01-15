@@ -17,17 +17,17 @@ function App() {
   const [hideExpense, setHideExpense] = useState("hidden");
   const [exId, SeExId] = useState("");
 
-  useEffect(() => {
-    let savedData = localStorage.getItem("budget-data");
-    savedData = JSON.parse(savedData);
-    if (savedData.length > 0) {
-      setData(savedData);
-    }
-  }, []);
+  // useEffect(() => {
+  //   let savedData = localStorage.getItem("budget-data");
+  //   savedData = JSON.parse(savedData);
+  //   if (savedData.length > 0) {
+  //     setData(savedData);
+  //   }
+  // }, []);
 
-  useEffect(() => {
-    localStorage.setItem("budget-data", JSON.stringify(data));
-  }, [data]);
+  // useEffect(() => {
+  //   localStorage.setItem("budget-data", JSON.stringify(data));
+  // }, [data]);
   const updateCat = (e) => {
     setMessage(e.target.value);
   };
