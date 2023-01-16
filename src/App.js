@@ -8,7 +8,61 @@ import { useState, useEffect } from "react";
 import AddExpense from "./components/AddExpense";
 
 function App() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([
+    {
+      id: nanoid(),
+      category: "Transport",
+      total: 1200,
+      max: 3200,
+      trans: [
+        {
+          id: nanoid(),
+          exName: "Bus",
+          date: new Date().toLocaleString("en-US", {
+            month: "long",
+            day: "2-digit",
+          }),
+          value: 12,
+        },
+        {
+          id: nanoid(),
+          exName: "Subway",
+          date: new Date().toLocaleString("en-US", {
+            month: "long",
+            day: "2-digit",
+          }),
+          value: 15,
+        },
+      ],
+    },
+    {
+      id: nanoid(),
+      category: "Shopping",
+      total: 1000,
+      max: 3000,
+      trans: [
+        {
+          id: nanoid(),
+          exName: "Clothes",
+          date: new Date().toLocaleString("en-US", {
+            month: "long",
+            day: "2-digit",
+          }),
+          value: 12,
+        },
+        {
+          id: nanoid(),
+          exName: "Food",
+          date: new Date().toLocaleString("en-US", {
+            month: "long",
+            day: "2-digit",
+          }),
+          value: 15,
+        },
+      ],
+    },
+  ]);
+
   const [expenseData, setExpenseData] = useState([]);
   const [hide, setHide] = useState("hidden");
   const [hideEx, setHideEx] = useState("hidden");
