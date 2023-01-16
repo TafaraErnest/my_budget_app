@@ -4,7 +4,7 @@ import AllItems from "./components/AllItems";
 import CardsSection from "./components/CardsSection";
 import Header from "./components/Header";
 import { nanoid } from "nanoid";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import AddExpense from "./components/AddExpense";
 
 function App() {
@@ -71,17 +71,17 @@ function App() {
   const [hideExpense, setHideExpense] = useState("hidden");
   const [exId, SeExId] = useState("");
 
-  useEffect(() => {
-    let savedData = localStorage.getItem("budget-data");
-    savedData = JSON.parse(savedData);
-    if (savedData.length > 0) {
-      setData(savedData);
-    }
-  }, []);
+  // useEffect(() => {
+  //   let savedData = localStorage.getItem("budget-data");
+  //   savedData = JSON.parse(savedData);
+  //   if (savedData.length > 0) {
+  //     setData(savedData);
+  //   }
+  // }, []);
 
-  useEffect(() => {
-    localStorage.setItem("budget-data", JSON.stringify(data));
-  }, [data]);
+  // useEffect(() => {
+  //   localStorage.setItem("budget-data", JSON.stringify(data));
+  // }, [data]);
 
   const updateCat = (e) => {
     setMessage(e.target.value);
