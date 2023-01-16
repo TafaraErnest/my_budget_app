@@ -4,7 +4,7 @@ import AllItems from "./components/AllItems";
 import CardsSection from "./components/CardsSection";
 import Header from "./components/Header";
 import { nanoid } from "nanoid";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import AddExpense from "./components/AddExpense";
 
 function App() {
